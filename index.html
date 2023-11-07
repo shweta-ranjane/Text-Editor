@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text Editor</title>
+</head>
+<body>
+	<div class="textbox">
+		<div align="center">
+			<form action="">
+				<label><h2>Enter a Text</h2></label>
+				<textarea name="text" id="text" cols="40" rows="10" onchange="fetchData"></textarea>
+				<button type="button" onclick="upperCase()">UPPERCASE</button>
+				<button type="button" onclick="lowerCase()">LOWERCASE</button>
+				<button type="button" onclick="search()">SEARCH</button>
+			</form>
+			<h3>
+				Text contains <span id="words"></span> words and <span id="char"></span> characters
+			</h3>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let text=document.getElementById("text");
+	</script>
+
+</body>
+</html>
