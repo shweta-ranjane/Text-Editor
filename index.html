@@ -10,7 +10,7 @@
 		<div align="center">
 			<form action="">
 				<label><h2>Enter a Text</h2></label>
-				<textarea name="text" id="text" cols="40" rows="10" onchange="fetchData"></textarea>
+				<textarea name="text" id="text" cols="40" rows="10" onchange="fetchData()"></textarea>
 				<button type="button" onclick="upperCase()">UPPERCASE</button>
 				<button type="button" onclick="lowerCase()">LOWERCASE</button>
 				<button type="button" onclick="search()">SEARCH</button>
@@ -25,7 +25,25 @@
 		let text=document.getElementById("text");
 		let word = document.getElementById('words');
 		word.innerHTML='0';
+		let character = document.getElementById('char');
+		character.innerHTML='0';
+
+		function fetchData() {
+
+			let wordlen = text.value.split(' ').length;
+			word.innerHTML=wordlen;
 		
+			let strlength = text.value.split('').length;
+			character.innerHTML=strlength;
+		}
+
+		function upperCase(){
+			text.value = text.value.toUpperCase();
+		}
+
+		function lowerCase(){
+			text.value = text.value.toLowerCase();
+		}
 	</script>
 
 </body>
